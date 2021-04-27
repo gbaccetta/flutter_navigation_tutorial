@@ -31,7 +31,7 @@ import 'user_screens/user_screen.dart';
       ],
     ),
 
-    //user routes
+    //user routes with a nested router
     AutoRoute(
       path: '/user',
       page: UserScreen,
@@ -39,45 +39,46 @@ import 'user_screens/user_screen.dart';
         AutoRoute(path: '', page: UserProfileScreen),
         AutoRoute(path: 'details', page: UserDetailsScreen),
         AutoRoute(path: 'friends', page: UserFriendsScreen),
+        
+        //nested group route with a tab router
+        AutoRoute(
+          path: 'group/:id',
+          page: GroupScreen,
+          children: [
+            AutoRoute(
+              path: 'tab1',
+              name: 'GroupTab1Router',
+              page: EmptyRouterPage,
+              children: [
+                AutoRoute(path: '', page: Tab1Screen),
+                RedirectRoute(path: '*', redirectTo: ''),
+              ],
+            ),
+            AutoRoute(
+              path: 'tab2',
+              name: 'GroupTab2Router',
+              page: EmptyRouterPage,
+              children: [
+                AutoRoute(path: '', page: Tab2Screen),
+                RedirectRoute(path: '*', redirectTo: ''),
+              ],
+            ),
+            AutoRoute(
+              path: 'tab3',
+              name: 'GroupTab3Router',
+              page: EmptyRouterPage,
+              children: [
+                AutoRoute(path: '', page: Tab3Screen),
+                RedirectRoute(path: '*', redirectTo: ''),
+              ],
+            ),
+          ],
+        ),
         // redirect all other paths
-        RedirectRoute(path: '*', redirectTo: 'teams'),
+        RedirectRoute(path: '*', redirectTo: 'profile'),
       ],
     ),
 
-    //group routes
-    AutoRoute(
-      path: '/group/:id',
-      page: GroupScreen,
-      children: [
-        AutoRoute(
-          path: 'tab1',
-          name: 'GroupTab1Router',
-          page: EmptyRouterPage,
-          children: [
-            AutoRoute(path: '', page: Tab1Screen),
-            RedirectRoute(path: '*', redirectTo: ''),
-          ],
-        ),
-        AutoRoute(
-          path: 'tab2',
-          name: 'GroupTab2Router',
-          page: EmptyRouterPage,
-          children: [
-            AutoRoute(path: '', page: Tab2Screen),
-            RedirectRoute(path: '*', redirectTo: ''),
-          ],
-        ),
-        AutoRoute(
-          path: 'tab3',
-          name: 'GroupTab3Router',
-          page: EmptyRouterPage,
-          children: [
-            AutoRoute(path: '', page: Tab3Screen),
-            RedirectRoute(path: '*', redirectTo: ''),
-          ],
-        ),
-      ],
-    ),
     // redirect all other paths
     RedirectRoute(path: '*', redirectTo: '/login'),
     //Home

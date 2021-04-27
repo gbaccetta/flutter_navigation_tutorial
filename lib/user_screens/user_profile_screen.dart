@@ -36,8 +36,7 @@ class UserProfileScreen extends StatelessWidget {
             ),
             Divider(),
             ElevatedButton(
-              onPressed: () =>
-                  context.router.root.push(GroupScreenRoute(id: '1')),
+              onPressed: () => context.router.push(GroupScreenRoute(id: '1')),
               child: Text(
                 'Go to GROUP 1',
               ),
@@ -46,8 +45,7 @@ class UserProfileScreen extends StatelessWidget {
               height: 16,
             ),
             ElevatedButton(
-              onPressed: () =>
-                  context.router.root.push(GroupScreenRoute(id: '2')),
+              onPressed: () => context.router.push(GroupScreenRoute(id: '2')),
               child: Text(
                 'Go to GROUP 2',
               ),

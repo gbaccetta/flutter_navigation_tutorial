@@ -52,7 +52,7 @@ class UserProfileScreen extends StatelessWidget {
             ),
             Divider(),
             ElevatedButton(
-              onPressed: () => context.router.root.replace(LoginScreenRoute()),
+              onPressed: () => context.router.root.replaceAll([LoginScreenRoute()]),
               child: Text(
                 'LOGOUT',
               ),

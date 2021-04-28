@@ -20,7 +20,7 @@ class UserProfileScreen extends StatelessWidget {
               height: 16,
             ),
             ElevatedButton(
-              onPressed: () => context.router.push(UserDetailsScreenRoute()),
+              onPressed: () => context.router.navigate(UserDetailsScreenRoute()),
               child: Text(
                 'User details',
               ),
@@ -29,7 +29,7 @@ class UserProfileScreen extends StatelessWidget {
               height: 16,
             ),
             ElevatedButton(
-              onPressed: () => context.router.push(UserFriendsScreenRoute()),
+              onPressed: () => context.router.navigate(UserFriendsScreenRoute()),
               child: Text(
                 'friends List',
               ),

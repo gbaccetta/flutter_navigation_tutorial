@@ -20,7 +20,7 @@ class SignupScreen extends StatelessWidget {
               height: 16,
             ),
             ElevatedButton(
-              onPressed: () => context.router.pop(),
+              onPressed: () => context.router.replace(LoginScreenRoute()),
               child: Text(
                 'Go to LoginScreen',
               ),

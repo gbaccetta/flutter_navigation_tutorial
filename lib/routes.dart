@@ -37,11 +37,11 @@ import 'login_screens/signup_screen.dart';
       page: UserScreen,
       children: [
         AutoRoute(path: '', page: UserProfileScreen),
-        AutoRoute(path: 'details', page: UserDetailsScreen),
-        AutoRoute(path: 'friends', page: UserFriendsScreen),
+        AutoRoute(path: 'details/*', page: UserDetailsScreen),
+        AutoRoute(path: 'friends/*', page: UserFriendsScreen),
         groupTabRouter,
         // redirect all other paths
-        RedirectRoute(path: '*', redirectTo: 'profile'),
+        RedirectRoute(path: '*', redirectTo: ''),
       ],
     ),
 

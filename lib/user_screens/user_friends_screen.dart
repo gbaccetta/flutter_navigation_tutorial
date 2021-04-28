@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:navigation_auto_route_tutorial/routes.gr.dart';
 
 class UserFriendsScreen extends StatelessWidget {
   @override
@@ -19,7 +20,7 @@ class UserFriendsScreen extends StatelessWidget {
               height: 16,
             ),
             ElevatedButton(
-              onPressed: () => context.router.pop(),
+              onPressed: () => context.router.navigate(UserProfileScreenRoute()),
               child: Text(
                 'Back to user',
               ),

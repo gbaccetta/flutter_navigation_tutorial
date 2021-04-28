@@ -8,7 +8,7 @@ A tutorial to show navigation in flutter using auto_route package and a complex 
 
 Find the tutorial here:
 
-- [Tutorial](https://gbaccetta.medium.com/)
+- [Tutorial](https://gbaccetta.medium.com/7f546d33fc4d?source=friends_link&sk=bfb493305125ca12a16c9ab0f4e40d80)
 
 The auto_route package can be found here :
 

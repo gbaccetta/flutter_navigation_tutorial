@@ -14,7 +14,7 @@ import 'login_screens/signup_screen.dart';
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Page,Route,Screen',
   routes: <AutoRoute>[
-    //authentification routes
+    //authentication routes
     AutoRoute(
       initial: true,
       path: '/login',
